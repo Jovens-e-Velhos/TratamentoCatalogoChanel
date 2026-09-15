@@ -1,5 +1,7 @@
 // Dicionário de tradução — transcrito integralmente de DICIONARIO_TRADUCAO no script original.
 const DICIONARIO_TRADUCAO = {
+  'VANITY CASE'                      : 'NECESSAIRE',
+  'O - CARD SUPORTE'                 : 'PORTA CARTÃO',
   'BUTTERFLY SUNGLASSES'             : 'OCULOS DE SOL BUTTERFLY',
   'SQUARE SUNGLASSES'                : 'OCULOS DE SOL SQUARE',
   'SHIELD SUNGLASSES'                : 'OCULOS DE SOL SHIELD',
