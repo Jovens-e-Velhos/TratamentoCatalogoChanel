@@ -58,8 +58,7 @@
 
     <div class="run-row">
       <button id="btn-processar" class="btn-primary" disabled>Gerar catálogo</button>
-      <button id="btn-download" class="btn-secondary" hidden>Baixar ModeloProduto.xlsx</button>
-      <button id="btn-download-cliente" class="btn-secondary" hidden>Baixar Planilha para Digitação.xlsx</button>    
+      <button id="btn-download" class="btn-secondary" hidden>Baixar ModeloProduto.xlsx</button>  
     </div>
 
     <pre class="log" id="log" aria-live="polite"><span class="log-idle">Aguardando os dois arquivos para iniciar…</span></pre>
@@ -74,6 +73,31 @@
     <dl class="stats" id="stats"></dl>
   </section>
 
+  <section class="block" aria-labelledby="cliente-title">
+    <div class="block-head">
+      <span class="block-num">04</span>
+      <h2 id="cliente-title">Planilha Cliente</h2>
+    </div>
+
+    <div class="dropzones" style="grid-template-columns: 1fr;">
+      <label class="dropzone" for="file-catalogo" id="dz-catalogo">
+        <span class="dz-tag">catalogoProdutos</span>
+        <span class="dz-name">Catálogo de produtos.xlsx</span>
+        <span class="dz-hint">A primeira coluna é usada como referência. Itens do E-invoice (campo 01) que já estiverem nela serão ignorados.</span>
+        <span class="dz-drop">Arraste o arquivo aqui ou clique para selecionar</span>
+        <span class="dz-file" data-role="filename">Nenhum arquivo selecionado</span>
+        <input type="file" id="file-catalogo" accept=".xlsx,.xls">
+      </label>
+    </div>
+
+    <div class="run-row">
+      <button id="btn-cliente" class="btn-primary" disabled>Gerar Planilha Cliente</button>
+      <button id="btn-download-cliente" class="btn-secondary" hidden>Baixar Planilha Cliente.xlsx</button>
+    </div>
+
+    <pre class="log" id="log-cliente" aria-live="polite"><span class="log-idle">Aguardando o catálogo de produtos…</span></pre>
+  </section>
+  
   <footer class="colophon">
     <p>Processamento local via <a href="https://sheetjs.com" target="_blank" rel="noopener">SheetJS</a>. Espelha as regras originais do script de catalogação (tradução de termos, limpeza de campos e vínculo de operador estrangeiro por país/subdepartamento).</p>
   </footer>
